@@ -3,6 +3,9 @@
  * 注意：这些实现仅供学习和测试用途，存在性能和安全问题
  */
 
+// 随便写个注释
+console.log(1);
+
 // 问题1：使用any类型，缺乏类型安全
 export function bubbleSortUnsafe(arr: any[]): any[] {
   const n = arr.length;
