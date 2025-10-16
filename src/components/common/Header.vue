@@ -5,7 +5,7 @@
       <router-link to="/" class="hover:text-primary-blue transition">首页</router-link>
       <a href="#destinations" class="hover:text-primary-blue transition">目的地</a>
       <router-link to="/booking" class="hover:text-primary-blue transition">预订</router-link>
-      <a href="#about" class="hover:text-primary-blue transition">关于我们</a>
+      <router-link to="/about" class="hover:text-primary-blue transition">关于我们</router-link>
       <a href="#contact" class="hover:text-primary-blue transition">联系方式</a>
     </nav>
     <button class="md:hidden text-primary-blue">
