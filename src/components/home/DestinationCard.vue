@@ -6,17 +6,29 @@
       <p class="text-gray-600 mb-4">{{ destination.description }}</p>
       <div class="flex justify-between items-center">
         <span class="text-primary-green font-bold text-lg">￥{{ destination.price }}</span>
-        <button class="bg-primary-blue hover:bg-primary-blue-dark text-white px-4 py-2 rounded transition">查看详情</button>
+        <button
+          @click="goToDetail"
+          class="bg-primary-blue hover:bg-primary-blue-dark text-white px-4 py-2 rounded transition"
+        >
+          查看详情
+        </button>
       </div>
     </div>
   </Card>
 </template>
 
 <script setup lang="ts">
+import { useRouter } from "vue-router";
 import Card from "../common/Card.vue";
 import type { Destination } from "../../types";
 
-defineProps<{
+const props = defineProps<{
   destination: Destination;
 }>();
+
+const router = useRouter();
+
+const goToDetail = () => {
+  router.push({ name: "DestinationDetail", params: { id: props.destination.id } });
+};
 </script>
